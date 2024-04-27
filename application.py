@@ -1,6 +1,7 @@
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, send_from_directory
 import numpy as np
 import pandas as pd
+import os
 
 from sklearn.preprocessing import StandardScaler
 from src.pipeline.predict_pipeline import CustomData, PredictPipeline
@@ -8,6 +9,13 @@ from src.pipeline.predict_pipeline import CustomData, PredictPipeline
 application = Flask(__name__)
 
 app = application
+
+STATIC_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), 'css'))
+
+# Serve static files from the 'styles' folder
+@app.route('/css/<path:filename>')
+def send_styles(filename):
+    return send_from_directory(STATIC_DIR, filename)
 
 ## Route for a home page
 
@@ -39,4 +47,4 @@ def predict_datapoint():
     
     
 if __name__=='__main__':
-    app.run(host='0.0.0.0')
+    app.run(host='0.0.0.0', debug=True)
