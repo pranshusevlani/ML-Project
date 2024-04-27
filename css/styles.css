@@ -1,9 +1,9 @@
 body {
-    background-color: #ffffff; /* Light gray background */
+    background-color: #f3e2e2; /* Light gray background */
     font-family: Arial, sans-serif;
 }
 .login {
-    background-color: #c9daf8; /* White background for the login box */
+    background-color: #c6e0df; /* White background for the login box */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Drop shadow */
     padding: 20px;
