@@ -10,11 +10,12 @@ application = Flask(__name__)
 
 app = application
 
-STATIC_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), 'css'))
+# Define the directory path for static files (CSS, images)
+STATIC_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), 'static'))
 
-# Serve static files from the 'styles' folder
-@app.route('/css/<path:filename>')
-def send_styles(filename):
+# Serve static files from the 'static' folder
+@app.route('/static/<path:filename>')
+def serve_static(filename):
     return send_from_directory(STATIC_DIR, filename)
 
 ## Route for a home page

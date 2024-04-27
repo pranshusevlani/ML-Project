@@ -1,0 +1,175 @@
+body {
+    background-color: #f3e2e2; /* Light gray background */
+    font-family: Arial, sans-serif;
+}
+/* CSS for the left cloud */
+.cloud-left {
+    position: absolute;
+    width: 200px;
+    height: 120px; /* Adjust the height of the cloud */
+    background-color: #fff;
+    border-radius: 100px;
+    border: 2px solid #ccc;
+    top: 90px; /* Adjust the distance from the image */
+    left: 150px; /* Adjust the distance from the left */
+    z-index: 1; /* Ensure the cloud is behind the image */
+}
+
+.cloud-left::before,
+.cloud-left::after {
+    content: '';
+    position: absolute;
+    background-color: #fff;
+    width: 100px;
+    height: 80px;
+    border-radius: 80px;
+    border: 2px solid #ccc;
+}
+
+.cloud-left::before {
+    top: -30px;
+    left: -50px;
+}
+
+.cloud-left::after {
+    top: -50px;
+    right: -50px;
+}
+
+/* CSS for the right cloud */
+.cloud-right {
+    position: absolute;
+    width: 200px;
+    height: 120px; /* Adjust the height of the cloud */
+    background-color: #fff;
+    border-radius: 100px;
+    border: 2px solid #ccc;
+    top: 90px; /* Adjust the distance from the image */
+    right: 150px; /* Adjust the distance from the right */
+    z-index: 1; /* Ensure the cloud is behind the image */
+}
+
+.cloud-right::before,
+.cloud-right::after {
+    content: '';
+    position: absolute;
+    background-color: #fff;
+    width: 100px;
+    height: 80px;
+    border-radius: 80px;
+    border: 2px solid #ccc;
+}
+
+.cloud-right::before {
+    top: -30px;
+    left: -50px;
+}
+
+.cloud-right::after {
+    top: -50px;
+    right: -50px;
+}
+
+/* CSS for the cloud text */
+.cloud-text {
+    position: absolute;
+    top: 50%; /* Adjust the vertical position of the text */
+    left: 50%; /* Center the text horizontally */
+    transform: translate(-50%, -50%);
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: #333;
+    font-weight: bold; /* Make the text bold */
+}
+
+/* CSS for the first image container */
+.left-image-container {
+    flex: 1;
+    text-align: center; /* Center the image horizontally */
+    margin-top: -200px; /* Adjust the margin-top to move the image up */
+    margin-left: 70px; /* Adjust the margin-left to move the image to the right */
+    border: 2px solid #ccc; /* Add a border around the image container */
+    border-radius: 10px; /* Add border radius for rounded corners */
+    padding: 10px; /* Add padding to create space between the border and the image */
+}
+
+/* CSS for the first image */
+.left-image-container img {
+    max-width: 100%; /* Ensure the image doesn't exceed the container's width */
+    height: auto; /* Maintain aspect ratio */
+    width: 600px; /* Set the width to 600px */
+    height: 300px; /* Set the height to 300px */
+    border-radius: 8px; /* Add border radius for rounded corners */
+}
+
+/* CSS for the second image container */
+.second-image-container {
+    flex: 1;
+    text-align: center; /* Center the image horizontally */
+    margin-top: -300px; /* Adjust the margin-top to move the image up */
+    margin-right: 70px; /* Adjust the margin-right to create space between the images */
+    border: 2px solid #ccc; /* Add a border around the image container */
+    border-radius: 10px; /* Add border radius for rounded corners */
+    padding: 10px; /* Add padding to create space between the border and the image */
+}
+
+/* CSS for the second image */
+.second-image-container img {
+    max-width: 100%; /* Ensure the image doesn't exceed the container's width */
+    height: auto; /* Maintain aspect ratio */
+    width: 400px; /* Set the width to 400px */
+    height: 300px; /* Set the height to 300px */
+    border-radius: 8px; /* Add border radius for rounded corners */
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+.form-container {
+    flex: 2;
+}
+.login {
+    background-color: #c6e0df; /* White background for the login box */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Drop shadow */
+    padding: 20px;
+    margin: 50px auto;
+    max-width: 400px;
+}
+h1 {
+    color: #333; /* Dark gray color for headings */
+    text-align: center;
+}
+.form-label {
+    color: #666; /* Gray color for form labels */
+}
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.btn-primary {
+    background-color: #007bff; /* Blue color for primary button */
+    color: #fff; /* White text color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker blue color on hover */
+}
+h2 {
+    color: #007bff; /* Blue color for result */
+    text-align: center;
+}
+/* Resizing the legend font */
+legend {
+    font-size: 18px; /* Adjust the font size as needed */
+}
